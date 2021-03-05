@@ -1,4 +1,5 @@
 #group -5
 
-NAME                      ROLL NO.               ROLE                  
-laukik verma   		S20190010108 		UI/UX designer
+NAME : laukik verma   			
+ROLL NO. : S20190010108 
+ROLE : UI/UX designer
