@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- BOX ICONS CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'testapp/visitor.css' %}" />
+    <title>Visitor log</title>
+    <link rel="icon" href="{% static 'discussions/GW_1.png' %}" />
+  </head>
+  <body id="body">
+    
+    <!--NAVIGATION BAR -->
+    <header>
+      <div style="margin-right: auto;">
+        <a href="{% url 'announcements_list' %}" >
+          <img class="logo" src="{% static 'testapp/logo.png' %}" alt="" />
+        </a>
+      </div>
+
+      <a href="{% url 'profile' %}">
+        <img class="cta" alt="avatar" src="{% static 'discussions/avatar.svg' %}" />
+      </a>
+    </header>
+
+    <!--main body-->
+    <a href="{% url 'profile' %}"><button class="bt-edit">Back</button></a>
+    <h1 class="heading">Visitor log</h1>
+    <div class="hello">
+      {% for visitor in object_list %}
+      <li style="cursor: default;">
+          <a class="head"><h1>{{ visitor.name }}</h1></a>
+          <p>
+           
+           {{ visitor.number }}
+           <br>
+           {{ visitor.purpose }}
+           <br>
+           {{ visitor.entryTime }}
+          </p>
+      </li>
+      {% endfor %}
+    </div>
+    <script src="{% static 'discussions/dashboard.js' %}"></script>
+</body>
+</html>

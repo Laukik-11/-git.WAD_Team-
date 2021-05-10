@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- BOX ICONS CSS-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'events/event.css' %}" />
+    <title>Discussion</title>
+    <link rel="icon" href="{% static 'discussions/GW_1.png' %}" />
+  </head>
+  <body >
+    <!--NAVIGATION BAR -->
+    <header>
+      <img class="logo" src="{% static 'discussions/logo.png' %}" alt="" />
+
+      <a href="{% url 'profile' %}">
+        <img class="cta" alt="avatar" src="{% static 'discussions/avatar.svg' %}" />
+      </a>
+    </header>
+
+    <!--main body-->
+    <h1 class="heading">EVENTS</h1>
+    
+
+    
+    <div >
+      <a class="bt-edit" href="{% url 'events:calendar' %}"> Calendar </a>
+    </div>
+    <div class="hello">
+      <ul>
+        <li><div class="span">TOPIC : </div><div>{{ object.title }}</div></li>
+        <li><div class="span">DESCRIPTIONS : </div><div class="right">{{ object.description }}</div></li>
+        <li><div class="span">START TIME : </div><div>{{ object.start_time }}</div></li>
+        <li><div class="span">END TIME : </div><div>{{ object.end_time }}</div></li>
+      </ul>
+    </div>
+    
+    <script src="{% static 'discussions/dashboard.js' %}"></script>
+</body>
+</html>
+

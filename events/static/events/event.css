@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+/*===== VARIABLES CSS Y SASS =====*/
+/*Varibles sass*/
+/*Variables css*/
+/*===== Colores =====*/
+:root {
+    --first-color: #333;
+    --second-color: #f7635b;
+    --white-color: white;
+}
+
+/*===== Fuente y tipografia =====*/
+:root {
+    --body-font: 'Quicksand', sans-serif;
+    --small-font-size: 0.875rem;
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --small-font-size: 0.938rem;
+    }
+}
+
+/*===== z index =====*/
+:root {
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    margin: 0;
+
+    font-family: var(--body-font);
+    background-color: var(--white-color);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* nav bar css*/
+
+header {
+    z-index: var(--z-modal);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 12% 20px 5%;
+    background-color: #333;
+}
+
+.logo {
+    margin-right: auto;
+    height: 70px;
+}
+
+.cta {
+    border-radius: 50%;
+    height: 70px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.cta:hover {
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 420px) {
+    .nav__toggle {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .nav__links {
+        display: none;
+    }
+}
+
+.heading {
+    color: #333;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 1rem;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 72px;
+    padding: auto;
+    text-align: center;
+}
+
+.bt-edit {
+    float: right;
+
+    margin-top: 2%;
+    margin-right: 7%;
+    margin-bottom: 2%;
+    background-color: #f7635b;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.hello {
+    padding: 100px 10%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.hello li {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hello .span {
+    height: auto;
+    width: 30%;
+    font-size: 1.2rem;
+    margin: 6px;
+}
+
+@media only screen and (max-width: 800px) {
+    .hello {
+        padding: 100px 5%;
+    }
+    .hello li {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: left;
+    }
+    .hello .span {
+        width: 100%;
+
+        margin: 6px;
+    }
+}
